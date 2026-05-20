@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants Page</title>
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!--Main-->
+
+    <section class="container">
+        <h1>All Restaurants</h1>
+
+        <!--Filters-->
+        <div class="filters">
+            <button class="filter-btn">Filters</button>
+            <select id="ratingfilter">
+                <option value="all">Rating</option>
+                <option value="4">4+ Rating</option>
+            </select>
+
+            <select id="cuisinefilter">
+                <option value="all">Cuisine</option>
+                <option value="burger">Burger</option>
+                <option value="pizza">Pizza</option>
+                <option value="biryani">Biryani</option>
+                <option value="momos">Momos</option>
+            </select>
+
+            <select id="sortfilter">
+                <option value="default">Sort by</option>
+                <option value="high">High Rating</option>
+                <option value="low">Low Rating</option>
+            </select>
+        </div>
+
+        <!--Restaurants-->
+        <div class="restaurants">
+            <!--Card-->
+            <div class="card">
+                <img src="img/restaurent page img-1.jpg" alt="Anjappar Hotel">
+                <div class="card-content">
+                    <h2>Anjappar Hotel</h2>
+                    <div class="details">
+                        <span>⭐ 4.2</span>
+                        <span>30 Mins</span>
+                    </div>
+                    <p>Curries,Egg Items,Fast Food</p>
+                    <button>Free Delivery</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/restaurent page img-2.jpg" alt="Adayar Ananda Bhavan">
+                <div class="card-content">
+                    <h2>Adayar Ananda Bhavan</h2>
+                    <div class="details">
+                        <span>⭐ 4.3</span>
+                        <span>45 Mins</span>
+                    </div>
+                    <p>Rasagulla,Athirasam,Bombay Halwa</p>
+                    <button>Free Delivery</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/restaurent page img-3.jpg" alt="Hotel Saravana Bhavan">
+                <div class="card-content">
+                    <h2>Hotel Saravana Bhava</h2>
+                    <div class="details">
+                        <span>⭐ 4.4</span>
+                        <span>25 Mins</span>
+                    </div>
+                    <p>Idly,Ghee Dosa,Poori, Ghee Pongal</p>
+                    <button>Free Delivery</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/restaurent page img-4.jpg" alt="Dindigul Thalappakatti">
+                <div class="card-content">
+                    <h2>Dindigul Thalappakatti</h2>
+                    <div class="details">
+                        <span>⭐ 4.5</span>
+                        <span>40 Mins</span>
+                    </div>
+                    <p>Biryani,Special Meals,Parottas</p>
+                    <button>Free Delivery</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--JavaScript-->
+
+    <script src="script.js"></script>
+</body>
+</html>
