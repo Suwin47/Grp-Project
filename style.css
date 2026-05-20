@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /*Navigation Bar*/
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,115 +13,219 @@
     color: black;
     padding: 20px;
     gap: 10px;
+    position: sticky;
+    top: 0;
+    
 }
-.logo{
+
+.logo {
     width: 300px;
     height: auto;
     object-fit: contain;
     border-radius: 50%;
     display: block;
 }
-.search-bar{
+
+.search-bar {
     position: relative;
     width: 80%;
     margin: 20px;
 }
-.search-bar input{
+
+.search-bar input {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 18px;
 }
-.search-bar i{
+
+.search-bar i {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
-.menu{
+
+.menu {
     display: none;
 }
-.nav-links{
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
-.nav-links li a{
+
+.nav-links li a {
     text-decoration: none;
     color: black;
     font-size: 18px;
 }
-.nav-links li a:hover{
+
+.nav-links li a:hover {
     text-decoration: underline;
-    
+
 }
-.poster{
+
+/*Poster Section*/
+
+.poster {
     background-image: url('./images/poster1.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
-   display: flex;
+    display: flex;
     align-items: center;
     padding: 60px;
 }
-.poster-content{
-    color:black;
+
+.poster-content {
+    color: black;
     font-size: large;
 }
-.poster-content h1{
+
+.poster-content h1 {
     font-size: 50px;
     margin-bottom: 10px;
     line-height: 1.2;
 }
-.poster-content span{
+
+.poster-content span {
     color: #3F281B;
 }
 
+/*Top Categories*/
+.categories {
+    padding: 20px;
+}
+.category-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+.category-list img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*Restaurant*/
+
+.restaurants{
+    padding: 20px;
+}
+.restaurant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.restaurant-header h3{
+    color: orangered;
+    cursor: pointer;
+}
+
+.restaurant-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.restaurant-list img {
+    width: 325px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.restaurant-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
 /*media query for mobile devices*/
 
 @media(max-width:600px) {
-    .navbar{
+    .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
     }
-    .logo{
+
+    .logo {
         width: 190px;
-       
+
     }
-    .search-bar{
+
+    .search-bar {
         position: relative;
         width: 100%;
         max-width: 350px;
     }
-    .search-bar input::placeholder{
+
+    .search-bar input::placeholder {
         font-size: 10px;
     }
-    .menu{
+
+    .menu {
         order: -1;
         display: block;
         cursor: pointer;
 
     }
-.nav-links{
-    display: none;
-}
 
-.poster{
-    background-image: url('./images/poster1.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-   display: flex;
-    align-items: center;
-    padding: 20px;
-}
-.poster-content{
-    color: #401901;
-    font-size: 15px;
-}
-.poster-content h1{
-    font-size: 25px;
-    margin-bottom: 10px;
+    .nav-links {
+        display: none;
+    }
+
+    .poster {
+        background-image: url('./images/poster1.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .poster-content {
+        color: #401901;
+        font-size: 15px;
+    }
+
+    .poster-content h1 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .categories h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .category-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+    .category-list img {
+        width: 100%;
+        height: 150px;
+    }
+    .restaurant-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+    .restaurant-list img {
+        width: 100%;
+        height: 150px;
+    }
+
 }
