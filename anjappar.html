@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu</title>
+    <title>Anjappar Menu</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -26,7 +26,7 @@
         <div class="border border-black rounded-3xl mr-5 h-12 w-96 items-center flex gap-4 p-2" id="menu-search-input">
             <i class="fa-solid fa-magnifying-glass"></i>
 
-            <input type="text" id="search" placeholder="Search for items....">
+            <input type="text" id="search" class="w-full" placeholder="Search for items....">
         </div>
 
         <div class="flex gap-4 font-bold">
@@ -216,10 +216,6 @@
         </div>
 
 
-
-
-
-
         <!--Mushroom briyani-->
 
         <div class="menu veg">
@@ -245,16 +241,11 @@
         </div>
 
 
-
-
-
-
-
-
     </div>
 
 
 
+    
     <!--starters-->
 
 
@@ -582,7 +573,7 @@
 
 
 
-<script>
+    <script>
         //briyani script
         let briyani = document.getElementById("briyani")
         let briyaniMenu = document.getElementById("briyani-menu")
@@ -668,36 +659,36 @@
 
 
 
-       
 
-let cart = []
 
-let cartbuttons = document.querySelectorAll(".cart")
+        let cart = []
 
-cartbuttons.forEach(function(button){
+        let cartbuttons = document.querySelectorAll(".cart")
 
-    button.addEventListener("click", function(){
+        cartbuttons.forEach(function (button) {
 
-        let product = button.parentElement.parentElement
+            button.addEventListener("click", function () {
 
-        let productname = product.querySelector(".font-bold").textContent
+                let product = button.parentElement.parentElement
 
-        let productprice = product.querySelector(".text-left h1:nth-child(2)").textContent
+                let productname = product.querySelector(".font-bold").textContent
 
-        let item = {
-            name: productname,
-            price: productprice
-        }
+                let productprice = product.querySelector(".text-left h1:nth-child(2)").textContent
 
-        cart.push(item)
+                let item = {
+                    name: productname,
+                    price: productprice
+                }
 
-        console.log(cart)
+                cart.push(item)
 
-        alert(productname + " added to cart")
+                console.log(cart)
 
-    })
+                alert(productname + " added to cart")
 
-})
+            })
+
+        })
 
 
     </script>
@@ -706,7 +697,7 @@ cartbuttons.forEach(function(button){
 
 
 
-    
+
 </body>
 
 

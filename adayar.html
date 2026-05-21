@@ -24,17 +24,9 @@
         <div class="border border-black rounded-3xl mr-5 h-12 w-96 items-center flex gap-4 p-2">
             <i class="fa-solid fa-magnifying-glass"></i>
 
-            <input type="text" id="search" placeholder="Search for items....">
+            <input type="text" id="search" class="w-full" placeholder="Search for items....">
         </div>
-        <!--<div class="relative">
-        
-             <h1 class="text-3xl p-2 text-blue-400 cursor-pointer" id="menu-selection">Menu</h1>
-            <div class="hidden flex flex-col gap-2 absolute top-14" id="menu">
-                <h1 id="briyani" class="cursor-pointer hover:text-red-500 p-5">Tiffin-Items</h1>
-                <h1 id="starters" class="cursor-pointer hover:text-red-500 p-5">Starters</h1>
-                <h1 id="desert" class="cursor-pointer hover:text-red-500 p-5">Sweets</h1>
 
-            </div>-->
 
 
         <div class="flex gap-3 justify-between text-blue-400 text-xl">
@@ -616,40 +608,40 @@
     <script>
 
 
-        let search = document.getElementById("search");
-        let sections = document.querySelectorAll(".section");
+        let search = document.getElementById("search")
+        let sections = document.querySelectorAll(".section")
 
         search.addEventListener("keyup", function () {
 
-            let value = search.value.toLowerCase().trim();
+            let value = search.value.toLowerCase().trim()
 
             sections.forEach(section => {
 
-                let items = section.querySelectorAll(".menu");
-                let match = 0;
+                let items = section.querySelectorAll(".menu")
+                let match = 0
 
                 items.forEach(item => {
-                    let name = item.querySelector(".font-bold").textContent.toLowerCase();
+                    let name = item.querySelector(".font-bold").textContent.toLowerCase()
 
                     if (name.includes(value)) {
-                        item.style.display = "block";
-                        match++;
+                        item.style.display = "block"
+                        match++
                     } else {
-                        item.style.display = "none";
+                        item.style.display = "none"
                     }
                 });
 
                 // section hide/show
                 if (value === "") {
-                    section.style.display = "block";
-                    items.forEach(i => i.style.display = "block");
+                    section.style.display = "block"
+                    items.forEach(i => i.style.display = "block")
                 } else {
-                    section.style.display = match > 0 ? "block" : "none";
+                    section.style.display = match > 0 ? "block" : "none"
                 }
 
-            });
+            })
 
-        });
+        })
     </script>
 
 
