@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominos Menu</title>
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+
+<body>
+    <!--navbar-->
+
+     <div class="flex justify-between items-center m-10 p-3 gap-4 bg-blue-300">
+        <h1 class="text-center text-4xl p-3 font-extrabold text-blue-700">Dominos</h1>
+        <img src="./Images/dominos-logo.jpg" class="w-52 rounded-3xl">
+
+        <div class="border border-black rounded-3xl mr-5 h-12 w-96 items-center flex gap-4 p-2"  id="menu-search-input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input type="text"  class="bg-blue-300 placeholder-black" id="search"  placeholder="Search for items....">
+        
+         </div>
+         <i class="fa-solid fa-cart-shopping text-3xl"></i>
+    </div>
+
+<!--main image section-->
+
+    <div>
+        <img src="./Images/burger-main.jpg" id="mainimage" class="transform transition duration-700 hover:scale-105">
+    </div>
+
+
+
+<!--Menu selection-->
+
+    <div class="m-5">
+        <h1 class="text-3xl font-extrabold">Our Menu</h1>
+        <div class="flex justify-center items-center gap-24 text-xl font-semibold">
+            <h1 id="burger" class="cursor-pointer">Burger</h1>
+            <h1 id="sandwich" class="cursor-pointer">Sandwich</h1>
+            <h1 id="wrap" class="cursor-pointer">Wraps</h1>
+            <h1 id="beverages" class="cursor-pointer">Beverages</h1>
+
+        </div>
+    </div>
+
+
+
+
+    <!--Pizza-->
+
+
+
+    <div class="grid grid-cols-2  gap-36 md:grid-cols-3 p-10  ml-14" id="pizza-menu">
+
+
+
+    
+
+
+    <div class="menu nonveg w-72 rounded-3xl overflow-hidden shadow-lg">
+
+    <div class="relative">
+
+        
+        <img src="./Images/chicken-pizza.jpg" class="w-72 h-72  cursor-pointer">
+
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+        <!-- Content -->
+        <div class="absolute bottom-0 w-full p-4 flex justify-between items-center text-white">
+
+            <div>
+                <h1 class="font-bold text-xl">Chicken Pizza</h1>
+                <h1 class="font-semibold">₹350</h1>
+            </div>
+
+            <button
+                class="cart bg-red-600 hover:bg-red-700 text-white p-3 rounded-2xl font-semibold">
+                Add
+            </button>
+
+        </div>
+
+    </div>
+    </div>
+
+    <!--farmhouse-->
+
+    <div class="menu nonveg border rounded-3xl shadow-lg overflow-hidden w-72">
+        <div class="relative">
+            <img src="./Images/farmhouse.jpg" class="w-72 h-72  cursor-pointer">
+       
+
+        <div class="absolute bottom-0 p-4 w-full flex items-center justify-between text-white">
+            <div>
+                <h1 class="font-bold text-xl">Farmhouse</h1>
+                <h1 class="font-semibold">$400</h1>
+            </div>
+            <button class="bg-red-600 hover:bg-red-700 p-3 rounded-2xl font-semibold">Add</button>
+
+        </div>
+
+         </div>
+
+    </div>
+
+
+    <!--veg extraveganza-->
+
+    <div class="menu nonveg border rounded-3xl shadow-lg overflow-hidden w-72">
+        <div class="relative">
+            <img src="./Images/veg-extraveganza.jpg" class="w-72 h-72  cursor-pointer">
+       
+
+        <div class="absolute bottom-0 p-4 w-full flex items-center justify-between text-white">
+            <div>
+                <h1 class="font-bold text-xl">Veg extraveganza</h1>
+                <h1 class="font-semibold">$450</h1>
+            </div>
+            <button class="bg-red-600 hover:bg-red-700 p-3 rounded-2xl font-semibold">Add</button>
+
+        </div>
+
+         </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+       <script>
+        
+
+let cart=[]
+
+let buttons=document.querySelectorAll("button")
+
+buttons.forEach(function(button){
+
+    button.addEventListener("click",function(){
+
+        let product=button.parentElement.parentElement
+
+        let productname=product.querySelector(".font-bold").textContent
+
+        let productprice=product.querySelector(".m-1").textContent
+
+        let item={
+            name:productname,
+            price:productprice
+        }
+
+        cart.push(item)
+
+        console.log(cart)
+
+        alert(productname + " added to cart")
+
+    })
+
+})
+
+</script>
+       
+  </body>
+</html>
