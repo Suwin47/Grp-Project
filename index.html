@@ -12,28 +12,38 @@
 <body>
 
     <!-- Navigation Bar -->
+
     <div class="navbar">
         <img src="./images/download.svg" alt="HungryBites Logo" class="logo">
         <div class="search-bar">
-            <input type="text" placeholder="Search for Restaurants or Foods">
+            <input type="text" id="search-input" placeholder="Search for Restaurants or Foods">
             <i class="fa-solid fa-magnifying-glass"></i>
-
-        </div>
-        <div class="menu">
-            <i class="fa-solid fa-bars"></i>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Restaurants</a></li>
-            <li><a href="#">Offers</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                </a></li>
-            <li><a href="#">
-                    <i class="fas fa-user"></i>
-                </a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./restaurants.html">Restaurants</a></li>
+            <li><a href="./offer.html">Offers</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+            <li><a href="#"><i class="fas fa-user"></i></a></li>
         </ul>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="menu">
+        <i class="fa-solid fa-bars menu-icon" id="menu-btn"></i>
+        <div class="mobile-menu" id="mobile-menu">
+
+            <i class="fa-solid fa-xmark close-icon" id="close-btn"></i>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./restaurants.html">Restaurants</a></li>
+                <li><a href="./offer.html">Offers</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#"><i class="fas fa-user"></i></a></li>
+            </ul>
+        </div>
     </div>
 
     <!--Poster Section-->
@@ -81,67 +91,91 @@
     <div class="restaurants">
         <div class="restaurant-header">
             <h2>Popular Restaurants</h2>
-            <h3>View All</h3>
+            <a href="restaurants.html" class="view-all">View All</a>
         </div>
         <div class="restaurant-list">
             <div class="restaurant-item">
-                <img src="./images/anjappar.png" alt="Restaurant 1">
-                <p>Anjappar</p>
-                <span>⭐4.5 • 25 min</span>
+                <div class="image-slider">
+                    <img src="./images/anjappar.png" class="slide active">
+                    <img src="./images/anjappar1.jpg" class="slide">
+                    <img src="./images/anjappar2.jpg" class="slide">
+                    <img src="./images/anjappar3.jpg" class="slide">
+                    <img src="./images/anjappar4.jpg" class="slide">
+                </div>
+                    <p>Anjappar</p>
+                    <span>⭐4.5 • 25 min</span>
             </div>
             <div class="restaurant-item">
-                <img src="./images/burger king.jpg" alt="Restaurant 2">
+                <div class="image-slider">
+                    <img src="./images/burger king.jpg" class="slide active">
+                    <img src="./images/Burger.jpg" class="slide">
+                    <img src="./images/Burger2.jpg" class="slide">
+                    <img src="./images/Burger3.jpg" class="slide">
+                    <img src="./images/Burger4.jpg" class="slide">
+                </div>
                 <p>Burger King</p>
                 <span>⭐4.0 • 20 min</span>
             </div>
             <div class="restaurant-item">
-                <img src="./images/adyar.png" alt="Restaurant 3">
+                <div class="image-slider">
+                    <img src="./images/adyar.png" class="slide active">
+                    <img src="./images/adyar1.jpg" class="slide">
+                    <img src="./images/adyar2.jpg" class="slide">
+                    <img src="./images/adyar3.jpg" class="slide">
+                    <img src="./images/adyar4.jpg" class="slide">
+                </div>
                 <p> Adayar Anandha Bhavan </p>
                 <span>⭐4.2 • 30 min</span>
             </div>
             <div class="restaurant-item">
-                <img src="./images/pizza hut.jpg" alt="Restaurant 3">
+                <div class="image-slider">
+                    <img src="./images/pizza hut.jpg" class="slide active">
+                    <img src="./images/pizza1.jpg" class="slide">
+                    <img src="./images/pizza2.jpg" class="slide">
+                    <img src="./images/pizza3.jpg" class="slide">
+                    <img src="./images/pizza4.jpg" class="slide">
+                </div>
                 <p>Pizza Hut</p>
                 <span>⭐4.3 • 25 min</span>
             </div>
         </div>
     </div>
-    
-<!--Membership Section-->
+
+    <!--Membership Section-->
     <div class="membership">
 
-    <div class="membership-container">
+        <div class="membership-container">
 
-        <h2 class="membership-head">HungryBites</h2>
+            <h2 class="membership-head">HungryBites</h2>
 
-        <h1 class="membership-title">GOLD</h1>
+            <h1 class="membership-title">GOLD</h1>
 
-        <p class="tagline">
-            India's Top Saving <br>
-            Program for Food Lovers
-        </p>
+            <p class="tagline">
+                India's Top Saving <br>
+                Program for Food Lovers
+            </p>
 
-        <h1 class="benefits-head">✦ GOLD BENEFITS ✦</h1>
+            <h1 class="benefits-head">✦ GOLD BENEFITS ✦</h1>
 
-        <div class="benefits">
+            <div class="benefits">
 
-            <div class="benefits-item">
-                <i class="fa-solid fa-motorcycle"></i>
-                <h2>Free Delivery</h2>
-                <p>At all restaurants within 8 km</p>
-            </div>
+                <div class="benefits-item">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <h2>Free Delivery</h2>
+                    <p>At all restaurants within 8 km</p>
+                </div>
 
-            <div class="benefits-item">
-                <i class="fa-solid fa-tags"></i>
-                <h2>30% Extra Off</h2>
-                <p>At 20,000+ partner restaurants</p>
+                <div class="benefits-item">
+                    <i class="fa-solid fa-tags"></i>
+                    <h2>30% Extra Off</h2>
+                    <p>At 20,000+ partner restaurants</p>
+                </div>
+
             </div>
 
         </div>
 
     </div>
-
-</div>
 
 
 
@@ -220,16 +254,24 @@
             <div class="city-item">Order food online in Gurgaon</div>
             <div class="city-item">Order food online in Hyderabad</div>
             <div class="city-item">Order food online in Delhi</div>
-
             <div class="city-item">Order food online in Mumbai</div>
             <div class="city-item">Order food online in Pune</div>
             <div class="city-item">Order food online in Kolkata</div>
             <div class="city-item">Order food online in Chennai</div>
-
             <div class="city-item">Order food online in Ahmedabad</div>
             <div class="city-item">Order food online in Chandigarh</div>
             <div class="city-item">Order food online in Jaipur</div>
-            <div class="city-item show-more">Show More ▼</div>
+
+            <div class="city-item extra-city">Order food online in Lucknow</div>
+            <div class="city-item extra-city">Order food online in Kanpur</div>
+            <div class="city-item extra-city">Order food online in Nagpur</div>
+            <div class="city-item extra-city">Order food online in Indore</div>
+            <div class="city-item extra-city">Order food online in Bhopal</div>
+            <div class="city-item extra-city">Order food online in Patna</div>
+            <div class="city-item extra-city">Order food online in Vadodara</div>
+            <div class="city-item extra-city">Order food online in Ludhiana</div>
+            <div class="city-item extra-city">Order food online in Agra</div>
+            <div class="city-item show-more" id="show-btn">Show More ▼</div>
         </div>
     </div>
 
@@ -275,7 +317,7 @@
         </div>
     </div>
 
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
