@@ -1,3 +1,40 @@
+//Rating filter
+
+const ratingSelect = document.querySelector(".rating-select");
+const carding = document.querySelectorAll(".card");
+
+function filterCards(){
+    const selectedRating = ratingSelect.value;
+    carding.forEach(function(card){
+        const cardRating = parseFloat(card.getAttribute("data-rating"));
+
+        if(selectedRating === "4+"){
+            if(cardRating >= 4){
+                card.style.display = "block";
+            }
+            else{
+                card.style.display = "none";
+            }
+        }
+
+        else if (selectedRating === "3+"){
+            if(cardRating >= 3 && cardRating <4){
+                card.style.display = "block";
+            }
+            else{
+                card.style.display = "none";
+            }
+        }
+
+        else{
+            card.style.display = "block";
+        }
+    });
+}
+    ratingSelect.addEventListener("change",filterCards);
+
+
+
 //All Card Selected
 
 const cards = document.querySelectorAll(".card");

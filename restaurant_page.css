@@ -8,6 +8,71 @@ body{
     background-color: white;
 }
 
+/*Navigation Bar*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orangered;
+    color: black;
+    padding: 20px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+}
+
+.search-bar {
+    position: relative;
+    width: 80%;
+    margin: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 18px;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu {
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+
+}
+
 /*Container*/
 
 .container{
@@ -116,18 +181,83 @@ body{
     font-weight: 600;
 }
 
-@media (max-width: 800px){
+/*Footer Section*/
+
+.footer {
+    background-color: #161B1F;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.footer-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-head p{
+    margin-top: 10px;
+    color: gray;
+}
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-items a{
+    text-decoration: none;
+    color:white;
+}
+.footer-items h3{
+    text-decoration: underline;
+}
+
+@media (max-width: 600px){
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 190px;
+
+    }
+
+    .search-bar {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .search-bar input::placeholder {
+        font-size: 9px;
+    }
+
+    .menu {
+        order: -1;
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .nav-links {
+        display: none;
+    }
 
     .container{
-        width: 94%;
+        width: 91%;
     }
 
     .container h1{
         font-size: 34px;
+        margin-left: 5px;
     }
 
     .filters{
-        gap: 15px;
+        gap: 10px;
     }
 
     .filters button{
@@ -143,6 +273,7 @@ body{
     .card{
         flex-direction: column;
         padding: 18px;
+        margin-right: 14px;
         gap: 18px;
     }
 
@@ -167,5 +298,15 @@ body{
     .card-content button{
         padding: 9px;
         font-size: 14px;
+    }
+
+    .footer-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .footer-head {
+        display: grid;
+        grid-column: 1/3;
     }
 }
