@@ -71,18 +71,18 @@
 /*Poster Section*/
 
 .poster {
-    background-image: url('./images/poster1.jpg');
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./images/poster1.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
     display: flex;
     align-items: center;
     padding: 60px;
-    opacity: 0.9;
+    
 }
 
 .poster-content {
-    color: black;
+    color:white;
     font-size: large;
 }
 
@@ -201,6 +201,11 @@
     padding: 20px;
     flex-wrap: wrap;
 }
+.restaurant-item p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 
 
 /*Membership*/
